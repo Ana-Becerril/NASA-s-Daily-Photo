@@ -1,0 +1,14 @@
+
+body, html, .parent{
+    width: 100%;
+    height:100%;
+    padding: 0%;
+    margin: 0%;
+    overflow-x: hidden;
+    background:url('./home-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position-x: left; 
+    opacity: 0.9;
+
+}
