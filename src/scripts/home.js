@@ -20,16 +20,31 @@ function home (){
     var inputContainer=document.createElement("div");
     inputContainer.classList.add("input-container");
 
+    var lblAuthor = document.createElement("Label");
+    lblAuthor.classList.add("lbl-author")
+    lblAuthor.innerHTML = "Author";
+    lblAuthor.setAttribute("for","author");
     var inputAuthor = document.createElement("input");
     inputAuthor.type = "text";
+    inputAuthor.classList.add("iauthor")
+    inputAuthor.id="author"
+
+
+    var lblPaint = document.createElement("Label");
+    lblPaint.classList.add("lbl-paint")
+    lblPaint.innerHTML = "Painting Art";
+    lblPaint.setAttribute("for","author");
     var inputPaint = document.createElement("input");
     inputPaint.type = "text";
+    inputPaint.classList.add("ipaint")
 
     const boxView=document.createElement("div");
     boxView.classList.add("box-view");
 
 
-    inputContainer.append(inputAuthor,inputPaint);
+    lblPaint.append(inputPaint);
+    lblAuthor.append(inputAuthor);
+    inputContainer.append(lblAuthor, lblPaint);
     boxSearch.append(tittleContainer, searchTittle,inputContainer);
     homeBox.append(boxSearch,boxView);
     homeContainer.append(homeBox);
