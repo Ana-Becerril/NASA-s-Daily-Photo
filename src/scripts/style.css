@@ -13,6 +13,7 @@ body,html{
 }
 
 .home-container{
+    position: relative;
     height: 100%;
     width: 100%;
     display:flex;
@@ -20,12 +21,22 @@ body,html{
     background:url('./home-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.7;
     justify-content: center;
     align-items: center;
 }
 
+.home-container::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(17, 17, 17, 0.726);
+}
+
 .home-box{
+    position: relative;
     width: 800px;
     height: 500px;
     background-color: aliceblue;
@@ -44,4 +55,16 @@ body,html{
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x:7%;
+    position: relative;
 }
+
+.box-view::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+

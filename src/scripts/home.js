@@ -10,6 +10,8 @@ function home (){
     boxSearch.classList.add("box-search")
     const boxView=document.createElement("div");
     boxView.classList.add("box-view");
+
+    
    
     homeBox.append(boxSearch,boxView);
     homeContainer.append(homeBox);
