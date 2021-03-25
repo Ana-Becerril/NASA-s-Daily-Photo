@@ -20,24 +20,7 @@ function home (){
     var inputContainer=document.createElement("div");
     inputContainer.classList.add("input-container");
 
-    var lblAuthor = document.createElement("Label");
-    lblAuthor.classList.add("lbl-author")
-    lblAuthor.innerHTML = "Author";
-    lblAuthor.setAttribute("for","author");
-    var inputAuthor = document.createElement("input");
-    inputAuthor.type = "text";
-    inputAuthor.classList.add("iauthor")
-    inputAuthor.id="author"
-
-    var lblPaint = document.createElement("Label");
-    lblPaint.classList.add("lbl-paint")
-    lblPaint.innerHTML = "Painting Art";
-    lblPaint.setAttribute("for","paint");
-    var inputPaint = document.createElement("input");
-    inputPaint.type = "text";
-    inputPaint.classList.add("ipaint")
-    inputPaint.id="paint"
-
+    
     var btn = document.createElement("button");
     btn.innerHTML = "Search";
     btn.classList.add("btn");
@@ -47,7 +30,51 @@ function home (){
 
         console.log(inputValAuthor, inputValPaint);
 
-    })
+    });
+
+    var lblAuthor = document.createElement("Label");
+    lblAuthor.classList.add("lbl-author")
+    lblAuthor.innerHTML = "Author";
+    lblAuthor.setAttribute("for","author");
+    var inputAuthor = document.createElement("input");
+    inputAuthor.type = "text";
+    inputAuthor.classList.add("iauthor")
+    inputAuthor.id="author";
+    inputAuthor.addEventListener("onkeyup",function(){
+        if(inputValPaint.length > 0) { 
+            document.getElementById('author').disabled = false; 
+        } else { 
+            document.getElementById('paint').disabled = true;
+        }
+    });
+
+    var lblPaint = document.createElement("Label");
+    lblPaint.classList.add("lbl-paint")
+    lblPaint.innerHTML = "Painting Art";
+    lblPaint.setAttribute("for","paint");
+    var inputPaint = document.createElement("input");
+    inputPaint.type = "text";
+    inputPaint.classList.add("ipaint")
+    inputPaint.id="paint"
+    inputPaint.addEventListener("onkeyup",function(){
+        if(inputValAuthor.length > 0) { 
+            document.getElementById('author').disabled = true; 
+        } else { 
+            document.getElementById('paint').disabled = false;
+        }
+    });
+
+
+   
+    //function verify(){
+        //if author is empty{
+            //alert "Put some text in there!"
+            //return
+        //}
+        //else{
+            //do button functionality
+        //}
+    //}
 
     const boxView=document.createElement("div");
     boxView.classList.add("box-view");
