@@ -6,6 +6,10 @@
     font-style: normal;
 }
 
+*{
+    outline: none;
+}
+
 body,html{
     width: 100%;
     height:100%;
@@ -51,23 +55,29 @@ body,html{
 }
 
 .box-search{
-    width: 30%;
+    width: 25%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tittle-container, .search-tittle{
     width: 100%;
-    height: 15%;
-    font-size: 40px;
+    height: 23%;
+    font-size: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Lexend';
+    color: salmon;
 }
 
 .search-tittle{
    
-    font-size: 18px;
+    font-size: 23px;
+    height: 10%;
+    color: black;
 }
 
 .lbl-author, .lbl-paint{
@@ -75,12 +85,15 @@ body,html{
     flex-direction: column;
     font-family: 'Lexend';
     font-size: 18px;
-    margin: 35px;
+    margin: 24px;
 
 }
 
 .iauthor, .ipaint{
     height: 30px;
+    border-radius: 8px;
+    border: 1px solid gray;
+
 }
 
 .input-container{
@@ -91,8 +104,27 @@ height: 40%;
 justify-content: space-evenly;
 }
 
+.btn{
+    margin-top: 10px;
+  line-height: 55px;
+  padding: 0 40px;
+  font-family: 'Lexend';
+  font-size: 20px;
+  background: salmon;
+  border: none;
+  border-radius: 11px;
+  width: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+    background: lightsalmon;
+  }
+
 .box-view{
-    width: 70%;
+    width: 75%;
     height: 100%;
     background:url('./home-image.jpg');
     background-size: cover;
