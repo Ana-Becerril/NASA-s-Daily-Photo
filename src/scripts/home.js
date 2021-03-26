@@ -40,13 +40,15 @@ function home (){
     inputAuthor.type = "text";
     inputAuthor.classList.add("iauthor")
     inputAuthor.id="author";
-    inputAuthor.addEventListener("onkeyup",function(){
-        if(inputValPaint.length > 0) { 
-            document.getElementById('author').disabled = false; 
-        } else { 
-            document.getElementById('paint').disabled = true;
-        }
-    });
+    inputAuthor.oninput = function () {
+    document.getElementById("paint").disabled = this.value != "";
+    inputPaint.placeholder = "-------------";
+};
+
+    var or= document.createElement("div");
+    or.classList.add("or");
+    or.innerHTML="or"
+
 
     var lblPaint = document.createElement("Label");
     lblPaint.classList.add("lbl-paint")
@@ -56,25 +58,11 @@ function home (){
     inputPaint.type = "text";
     inputPaint.classList.add("ipaint")
     inputPaint.id="paint"
-    inputPaint.addEventListener("onkeyup",function(){
-        if(inputValAuthor.length > 0) { 
-            document.getElementById('author').disabled = true; 
-        } else { 
-            document.getElementById('paint').disabled = false;
-        }
-    });
-
-
-   
-    //function verify(){
-        //if author is empty{
-            //alert "Put some text in there!"
-            //return
-        //}
-        //else{
-            //do button functionality
-        //}
-    //}
+    inputPaint.oninput = function () {
+        document.getElementById("author").disabled = this.value != "";
+        inputAuthor.placeholder = "-------------";
+    };
+  
 
     const boxView=document.createElement("div");
     boxView.classList.add("box-view");
@@ -82,7 +70,7 @@ function home (){
 
     lblPaint.append(inputPaint);
     lblAuthor.append(inputAuthor);
-    inputContainer.append(lblAuthor, lblPaint);
+    inputContainer.append(lblAuthor, or, lblPaint);
     boxSearch.append(tittleContainer, searchTittle,inputContainer, btn);
     homeBox.append(boxSearch,boxView);
     homeContainer.append(homeBox);
