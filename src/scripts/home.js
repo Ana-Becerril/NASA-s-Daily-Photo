@@ -42,11 +42,7 @@ function home (){
     inputAuthor.id="author";
     inputAuthor.oninput = function () {
     document.getElementById("paint").disabled = this.value != "";
-    inputPaint.placeholder = "-------------";
 };
-    inputAuthor.addEventListener("click", function(){
-        inputAuthor.placeholder = "";  
-    })
 
     var or= document.createElement("div");
     or.classList.add("or");
@@ -63,12 +59,8 @@ function home (){
     inputPaint.id="paint"
     inputPaint.oninput = function () {
         document.getElementById("author").disabled = this.value != "";
-        inputAuthor.placeholder = "-----------------";
     };
-   
-    inputPaint.addEventListener("click", function(){
-        inputPaint.placeholder = "";  
-    })
+  
 
     const boxView=document.createElement("div");
     boxView.classList.add("box-view");

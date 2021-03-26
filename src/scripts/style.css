@@ -109,6 +109,11 @@ justify-content: space-evenly;
 text-align: center;
 }
 
+input:disabled {
+    background-color: -internal-light-dark(rgba(146, 143, 143, 0.3), rgba(59, 59, 59, 0.623));
+    border-color: rgba(118, 118, 118, 0.3);
+}
+
 .btn{
     margin-top: 5px;
   line-height: 55px;
