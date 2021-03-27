@@ -1,3 +1,5 @@
+import api from "./api";
+
 function home (){
 
     const homeContainer=document.createElement("div");
@@ -29,6 +31,8 @@ function home (){
         var inputValPaint = document.getElementById("paint").value;
 
         console.log(inputValAuthor, inputValPaint);
+        
+        api();
 
     });
 
@@ -64,8 +68,12 @@ function home (){
 
     const boxView=document.createElement("div");
     boxView.classList.add("box-view");
+    const data=document.createElement("div");
+    data.classList.add("data-paint");
+    data.innerHTML="Frutero. Becerril, Ana. 2002"
 
 
+    boxView.append(data);
     lblPaint.append(inputPaint);
     lblAuthor.append(inputAuthor);
     inputContainer.append(lblAuthor, or, lblPaint);

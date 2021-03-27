@@ -114,6 +114,10 @@ input:disabled {
     border-color: rgba(118, 118, 118, 0.3);
 }
 
+input {
+    font: 400 18px "Lexend";
+}
+
 .btn{
     margin-top: 5px;
   line-height: 55px;
@@ -153,3 +157,11 @@ input:disabled {
     background-image: linear-gradient(to bottom, transparent 0%, black 100%);
 }
 
+.data-paint{
+    position: absolute;
+    bottom: 5px;
+    right: 12px;
+    font-family: 'Lexend';
+    color: white;
+    z-index: 2;
+}
