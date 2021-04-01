@@ -145,10 +145,10 @@ input {
 .box-view{
     width: 75%;
     height: 100%;
-    background:url('./home-image.jpg');
+   /* background:url('./home-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x:7%;
+    background-position-x:7%;*/
     position: relative;
 }
 
@@ -160,6 +160,7 @@ input {
     right: 0;
     bottom: 0;
     background-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    z-index: 2;
 }
 
 .data-paint{
@@ -168,5 +169,5 @@ input {
     right: 12px;
     font-family: 'Lexend';
     color: white;
-    z-index: 2;
+    z-index: 3;
 }

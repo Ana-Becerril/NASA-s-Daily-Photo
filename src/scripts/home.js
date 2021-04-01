@@ -1,4 +1,6 @@
 import api from "./api";
+import homeImage from './home-image.jpg';
+
 
 function home (){
 
@@ -68,7 +70,9 @@ function home (){
 
     const boxViewContainer=document.createElement("div");
     boxViewContainer.classList.add("box-view-container")
+
     const boxView=document.createElement("img");
+    boxView.src=homeImage;
     boxView.classList.add("box-view");
     const data=document.createElement("div");
     data.classList.add("data-paint");
