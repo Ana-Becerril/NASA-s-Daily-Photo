@@ -66,14 +66,16 @@ function home (){
     };
   
 
-    const boxView=document.createElement("div");
+    const boxViewContainer=document.createElement("div");
+    boxViewContainer.classList.add("box-view-container")
+    const boxView=document.createElement("img");
     boxView.classList.add("box-view");
     const data=document.createElement("div");
     data.classList.add("data-paint");
     data.innerHTML="Frutero. Becerril, Ana. 2002"
 
 
-    boxView.append(data);
+    boxViewContainer.append(boxView, data);
     lblPaint.append(inputPaint);
     lblAuthor.append(inputAuthor);
     inputContainer.append(lblAuthor, or, lblPaint);

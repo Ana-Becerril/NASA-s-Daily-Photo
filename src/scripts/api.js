@@ -9,5 +9,13 @@ fetch('https://www.rijksmuseum.nl/api/nl/collection?key=2VKRLCml&involvedMaker=R
 }).catch(Error => console.log(Error))
 console.log();
 
+const displayImage = document.querySelector('.box-view');
+fetch('https://www.rijksmuseum.nl/api/nl/collection?key=2VKRLCml&involvedMaker=Rembrandt+van+Rijn')
+  .then(response => response.json())
+  .then(function(response) {
+   displayImage.innerHTML=response.artObjects[1].webImage.url
+}).catch(Error => console.log(Error))
+console.log();
+
 }
 export default api; 

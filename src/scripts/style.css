@@ -137,6 +137,11 @@ input {
     background: lightsalmon;
   }
 
+.box-view-container{
+    width: 75%;
+    height: 100%;
+}
+
 .box-view{
     width: 75%;
     height: 100%;
