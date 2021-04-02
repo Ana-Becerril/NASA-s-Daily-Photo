@@ -9,11 +9,13 @@ fetch('https://www.rijksmuseum.nl/api/nl/collection?key=2VKRLCml&involvedMaker=R
 }).catch(Error => console.log(Error))
 console.log();
 
-const displayImage = document.querySelector('.box-view');
+const displayImageView = document.querySelector('.box-view');
+const displayImageHome = document.querySelector('.home-container')
 fetch('https://www.rijksmuseum.nl/api/nl/collection?key=2VKRLCml&involvedMaker=Rembrandt+van+Rijn')
   .then(response => response.json())
   .then(function(response) {
-   displayImage.innerHTML=response.artObjects[1].webImage.url
+    displayImageView.style.backgroundImage=`url(${response.artObjects[1].webImage.url})`
+    displayImageHome.style.backgroundImage=`url(${response.artObjects[1].webImage.url})`
 }).catch(Error => console.log(Error))
 console.log();
 
