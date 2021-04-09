@@ -16,6 +16,7 @@ body,html{
     padding: 0%;
     margin: 0%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #parent{
@@ -64,7 +65,7 @@ body,html{
 
 .tittle-container, .search-tittle{
     width: 100%;
-    height: 23%;
+    height: 27%;
     font-size: 45px;
     display: flex;
     justify-content: center;
@@ -76,11 +77,12 @@ body,html{
 .search-tittle{
    
     font-size: 23px;
-    height: 10%;
+    height: 20%;
     color: black;
+    text-align: center;
 }
 
-.lbl-author, .lbl-paint, .or{
+.lbl-author{
     display: flex;
     flex-direction: column;
     font-family: 'Lexend';
@@ -88,12 +90,7 @@ body,html{
     margin: 20px 24px;
 }
 
-.or{
-    margin:0 24px;
-    font-size: 23px;
-}
-
-.iauthor, .ipaint{
+.iauthor{
     height: 30px;
     border-radius: 8px;
     border: 1px solid gray;
@@ -104,7 +101,7 @@ body,html{
 display: flex;
 flex-direction: column;
 width: 100%;
-height: 47%;
+height: 26%;
 justify-content: space-evenly;
 text-align: center;
 }

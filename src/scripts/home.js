@@ -18,7 +18,7 @@ function home (){
 
     const searchTittle=document.createElement("div")
     searchTittle.classList.add("search-tittle");
-    searchTittle.innerHTML="Search by:"
+    searchTittle.innerHTML="Getting a random artwork from the artist of your choice ..."
 
     var inputContainer=document.createElement("div");
     inputContainer.classList.add("input-container");
@@ -29,42 +29,22 @@ function home (){
     btn.classList.add("btn");
     btn.addEventListener("click", function(){
         var inputValAuthor = document.getElementById("author").value;
-        var inputValPaint = document.getElementById("paint").value;
-
-        console.log(inputValAuthor, inputValPaint);
+        console.log(inputValAuthor);
         
-        api();
+        api(inputValAuthor);
 
     });
 
     var lblAuthor = document.createElement("Label");
     lblAuthor.classList.add("lbl-author")
-    lblAuthor.innerHTML = "Author";
+    lblAuthor.innerHTML = "Artist";
     lblAuthor.setAttribute("for","author");
     var inputAuthor = document.createElement("input");
     inputAuthor.type = "text";
     inputAuthor.classList.add("iauthor")
     inputAuthor.id="author";
     inputAuthor.oninput = function () {
-    document.getElementById("paint").disabled = this.value != "";
 };
-
-    var or= document.createElement("div");
-    or.classList.add("or");
-    or.innerHTML="or"
-
-
-    var lblPaint = document.createElement("Label");
-    lblPaint.classList.add("lbl-paint")
-    lblPaint.innerHTML = "Painting Art";
-    lblPaint.setAttribute("for","paint");
-    var inputPaint = document.createElement("input");
-    inputPaint.type = "text";
-    inputPaint.classList.add("ipaint")
-    inputPaint.id="paint"
-    inputPaint.oninput = function () {
-        document.getElementById("author").disabled = this.value != "";
-    };
   
 
     const boxViewContainer=document.createElement("div");
@@ -79,9 +59,8 @@ function home (){
 
 
     boxViewContainer.append(boxView, data);
-    lblPaint.append(inputPaint);
     lblAuthor.append(inputAuthor);
-    inputContainer.append(lblAuthor, or, lblPaint);
+    inputContainer.append(lblAuthor);
     boxSearch.append(tittleContainer, searchTittle,inputContainer, btn);
     homeBox.append(boxSearch,boxViewContainer);
     homeContainer.append(homeBox);
