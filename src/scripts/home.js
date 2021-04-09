@@ -23,16 +23,14 @@ function home (){
     var inputContainer=document.createElement("div");
     inputContainer.classList.add("input-container");
 
-    
     var btn = document.createElement("button");
     btn.innerHTML = "Search";
     btn.classList.add("btn");
     btn.addEventListener("click", function(){
         var inputValAuthor = document.getElementById("author").value;
-        console.log(inputValAuthor);
-        
-        api(inputValAuthor);
+        console.log(inputValAuthor);          
 
+        api(inputValAuthor);
     });
 
     var lblAuthor = document.createElement("Label");
@@ -45,7 +43,6 @@ function home (){
     inputAuthor.id="author";
     inputAuthor.oninput = function () {
 };
-  
 
     const boxViewContainer=document.createElement("div");
     boxViewContainer.classList.add("box-view-container")
