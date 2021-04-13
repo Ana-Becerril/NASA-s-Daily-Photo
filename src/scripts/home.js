@@ -14,35 +14,28 @@ function home (){
 
     const tittleContainer=document.createElement("div");
     tittleContainer.classList.add("tittle-container");
-    tittleContainer.innerHTML="Find Art"
+    tittleContainer.innerHTML="NASA's daily photo"
 
     const searchTittle=document.createElement("div")
     searchTittle.classList.add("search-tittle");
-    searchTittle.innerHTML="Getting a random artwork from the artist of your choice ..."
-
-    var inputContainer=document.createElement("div");
-    inputContainer.classList.add("input-container");
+    searchTittle.innerHTML="Click on the button to see the Astronomy Picture of the Day."
 
     var btn = document.createElement("button");
-    btn.innerHTML = "Search";
+    btn.innerHTML = "Show me";
     btn.classList.add("btn");
     btn.addEventListener("click", function(){
-        var inputValAuthor = document.getElementById("author").value;
-        console.log(inputValAuthor);          
-
-        api(inputValAuthor);
+        
+        api();
     });
 
-    var lblAuthor = document.createElement("Label");
-    lblAuthor.classList.add("lbl-author")
-    lblAuthor.innerHTML = "Artist";
-    lblAuthor.setAttribute("for","author");
-    var inputAuthor = document.createElement("input");
-    inputAuthor.type = "text";
-    inputAuthor.classList.add("iauthor")
-    inputAuthor.id="author";
-    inputAuthor.oninput = function () {
-};
+    var infoBox=document.createElement("details");
+    var summaryBox=document.createElement("summary")
+    summaryBox.innerHTML="Click me to see more details"
+    summaryBox.classList.add("summary-box")
+    var paragraphDetails=document.createElement("p")
+    paragraphDetails.innerHTML="The Triangulum Galaxy, a.k.a., Messier 33, is a spiral galaxy about 3 million light years from Earth. It belongs to the Local Group of galaxies that includes the Milky Way and Andromeda galaxies. Chandra's X-ray data (pink) reveal a diverse range of objects including neutron stars and black holes that are pulling material from a companion star, and supernova remnants. An optical image from the Subaru telescope in Hawaii (red, green, and blue) shows the majestic arms of this spiral galaxy that in many ways is a cousin to our own Milky Way."
+    paragraphDetails.classList.add("p-details")
+
 
     const boxViewContainer=document.createElement("div");
     boxViewContainer.classList.add("box-view-container")
@@ -52,13 +45,12 @@ function home (){
 
     const data=document.createElement("div");
     data.classList.add("data-paint");
-    data.innerHTML="Frutero. Becerril, Ana. 2002"
+    data.innerHTML="The Triangulum Galaxy"
 
 
     boxViewContainer.append(boxView, data);
-    lblAuthor.append(inputAuthor);
-    inputContainer.append(lblAuthor);
-    boxSearch.append(tittleContainer, searchTittle,inputContainer, btn);
+    infoBox.append(summaryBox,paragraphDetails)
+    boxSearch.append(tittleContainer, searchTittle, btn, infoBox);
     homeBox.append(boxSearch,boxViewContainer);
     homeContainer.append(homeBox);
    

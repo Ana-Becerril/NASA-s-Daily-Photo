@@ -49,14 +49,14 @@ body,html{
 
 .home-box{
     position: relative;
-    width: 1100px;
-    height: 500px;
+    width: 1104px;
+    height: 570px;
     background-color: aliceblue;
     display: flex;
 }
 
 .box-search{
-    width: 25%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -65,74 +65,52 @@ body,html{
 
 .tittle-container, .search-tittle{
     width: 100%;
-    height: 27%;
-    font-size: 45px;
+    height: 14%;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Lexend';
-    color: salmon;
+    color: rgb(162, 114, 250);
 }
 
 .search-tittle{
    
-    font-size: 23px;
-    height: 20%;
+    font-size: 21px;
+    height: 7%;
     color: black;
     text-align: center;
 }
 
-.lbl-author{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Lexend';
-    font-size: 18px;
-    margin: 20px 24px;
-}
-
-.iauthor{
-    height: 30px;
-    border-radius: 8px;
-    border: 1px solid gray;
-
-}
-
-.input-container{
-display: flex;
-flex-direction: column;
-width: 100%;
-height: 26%;
-justify-content: space-evenly;
-text-align: center;
-}
-
-input:disabled {
-    background-color: -internal-light-dark(rgba(146, 143, 143, 0.3), rgba(59, 59, 59, 0.623));
-    border-color: rgba(118, 118, 118, 0.3);
-}
-
-input {
-    font: 400 18px "Lexend";
-}
-
 .btn{
-    margin-top: 5px;
+    margin-top: 18px;
   line-height: 55px;
   padding: 0 40px;
   font-family: 'Lexend';
-  font-size: 20px;
-  background: salmon;
+  font-size: 17px;
+  background: rgb(162, 114, 250);
   border: none;
   border-radius: 11px;
-  width: 114px;
+  width: 154px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btn:hover {
-    background: lightsalmon;
+    background: rgb(187, 164, 230);
   }
+
+.p-details, .summary-box{
+    font-family: 'Lexend';
+    font-size: 12px;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+.summary-box{
+    padding-top: 5px;
+}
 
 .box-view-container{
     width: 75%;
