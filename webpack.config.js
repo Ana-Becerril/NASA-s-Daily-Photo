@@ -25,7 +25,7 @@ module.exports = {
     // new Dotenv(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HTMLWebpackPlugin({
-      title: 'Gallery Art',
+      title: 'APOD NASA',
     }),
     new PreloadWebpackPlugin(),
   ],
