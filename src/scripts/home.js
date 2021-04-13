@@ -33,7 +33,7 @@ function home (){
     summaryBox.innerHTML="Click me to see more details"
     summaryBox.classList.add("summary-box")
     var paragraphDetails=document.createElement("p")
-    // typo here
+    
     paragraphDetails.innerHTML="The Triangulum Galaxy, a.k.a., Messier 33, is a spiral galaxy about 3 million light years from Earth. It belongs to the Local Group of galaxies that includes the Milky Way and Andromeda galaxies. Chandra's X-ray data (pink) reveal a diverse range of objects including neutron stars and black holes that are pulling material from a companion star, and supernova remnants. An optical image from the Subaru telescope in Hawaii (red, green, and blue) shows the majestic arms of this spiral galaxy that in many ways is a cousin to our own Milky Way."
     paragraphDetails.classList.add("p-details")
 
