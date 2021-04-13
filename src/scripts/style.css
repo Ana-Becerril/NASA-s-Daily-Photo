@@ -112,6 +112,10 @@ body,html{
     padding-top: 5px;
 }
 
+details{
+    overflow-y: scroll;
+}
+
 .box-view-container{
     width: 75%;
     height: 100%;
