@@ -14,7 +14,7 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=UUCPtT1EMz3PWHzlytDBsHkKp1390
     displayImageView.style.backgroundImage=`url(${response.hdurl})`
     displayImageHome.style.backgroundImage=`url(${response.hdurl})`
     displayInfo.innerHTML= response.explanation;
-    console.log(response)
+    //console.log(response)
 }).catch(Error => console.log(Error))
 
 }
