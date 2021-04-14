@@ -8,6 +8,3 @@ parent.id = 'parent';
 document.body.appendChild(parent)
 parent.appendChild(home());
 
-const hbImage = new Image();
-hbImage.src = homeImage;
-parent.appendChild(hbImage);

@@ -15,8 +15,8 @@ body,html{
     height:100%;
     padding: 0%;
     margin: 0%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /*overflow-x: hidden;
+    overflow-y: hidden;*/
 }
 
 #parent{
@@ -49,8 +49,8 @@ body,html{
 
 .home-box{
     position: relative;
-    width: 1104px;
-    height: 570px;
+    width: 80%;
+    height: 90%;
     background-color: aliceblue;
     display: flex;
 }
@@ -105,7 +105,7 @@ body,html{
 
 .p-details, .summary-box{
     font-family: 'Lexend';
-    font-size: 12px;
+    font-size: 15px;
     text-align: justify;
     padding: 0 15px;
 }
@@ -236,6 +236,7 @@ details{
 
 @media only screen and (max-width: 563px) {
 
+
 .home-box{
     flex-direction: column;
     height: 100%;
@@ -270,4 +271,7 @@ details{
     height: 100%;
 }
 
+.p-details, .summary-box{
+    font-size: 12px;
+}
 }
